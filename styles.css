@@ -1,0 +1,52 @@
+body {
+  background: #0f172a;
+  color: #e2e8f0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.glass-card {
+  background: rgba(30, 41, 59, .7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.neon-green { color: #4ade80; text-shadow: 0 0 8px rgba(74, 222, 129, 0.5); }
+.gold-accent { color: #fbbf24; }
+.border-gold { border-color: #fbbf24; }
+
+.ticker-scroll {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+}
+
+.ticker-track {
+  display: flex;
+  gap: 2rem;
+  animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.status-active {
+  background-color: #22c546;
+  box-shadow: 0 0 8px #22c546;
+}
+
+.signal-buy { color: #4ade80; background: rgba(74, 222, 129, 0.1); }
+.signal-sell { color: #f87171; background: rgba(248, 113, 113, 0.1); }
+.signal-hold { color: #fbbf24; background: rgba(251, 191, 36, 0.1); }
